@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Multithreading | Java Practical</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     TOP HEADER
+====================================================== -->
+
+<header class="top-header">
+
+    <div class="student">
+
+        <div class="student-name">
+            KRITIMA
+        </div>
+
+        <div class="student-details">
+            BCA
+            <span>•</span>
+            3rd Year
+            <span>•</span>
+            5th Semester
+        </div>
+
+    </div>
+
+
+    <div class="page-title">
+
+        <h1>
+            Java Programming
+        </h1>
+
+        <p>
+            Practical Programs
+        </p>
+
+    </div>
+
+
+    <a href="../index.html" class="home-btn">
+        ← HOME
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     TOPIC NAVIGATION
+====================================================== -->
+
+<nav class="topic-nav">
+
+    <a href="../index.html">
+        HOME
+    </a>
+
+    <a href="../BasicPrograms/Basic.html">
+        Basic Programming
+    </a>
+
+    <a href="../single_dimensional_array/Array.html">
+        Single Arrays
+    </a>
+
+    <a href="../multidimensionalarrays/MultiArray.html">
+        Multi Arrays
+    </a>
+
+    <a href="../StringPrograms/string.html">
+        Strings
+    </a>
+
+    <a href="../OopsPrograms/oop.html">
+        OOP
+    </a>
+
+    <a href="../InheritancePrograms/inheritance.html">
+        Inheritance
+    </a>
+
+    <a href="../ExceptionPrograms/exception.html">
+        Exception Handling
+    </a>
+
+    <a href="thread.html" class="active">
+        Multithreading
+    </a>
+
+</nav>
+
+
+
+<!-- =====================================================
+     MAIN LAYOUT
+====================================================== -->
+
+<div class="main-container">
+
+
+    <!-- =================================================
+         LEFT QUESTION SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+
+            <h2>
+                Questions <span>•</span> 13
+            </h2>
+
+        </div>
+
+        <div class="question-list" id="questionList"></div>
+
+    </aside>
+
+
+
+    <!-- =================================================
+         CONTENT
+    ================================================== -->
+
+    <main class="content" id="content">
+
+    </main>
+
+
+</div>
+
+
+
+<script>
+
+
+/* =====================================================
+   MULTITHREADING QUESTIONS
+===================================================== */
+
+const questions = [
+
+    "Create a thread to print Hello World",
+
+    "Print even and odd numbers using multiple threads",
+
+    "Sort an array using multiple threads",
+
+    "Perform matrix multiplication using multiple threads",
+
+    "Find the sum of all prime numbers up to a given limit using multiple threads",
+
+    "Create a concurrent web crawler that crawls multiple websites simultaneously using threads",
+
+    "Create a bank account with concurrent deposits and withdrawals using threads",
+
+    "Create multiple threads using Runnable interface",
+
+    "Create multiple threads using Thread class",
+
+    "Create multiple threads, set their name and priority",
+
+    "Create multiple threads and show an example of synchronization keyword",
+
+    "Create multiple threads and show examples of notify, notifyAll, wait, resume and sleep methods",
+
+    "Create multiple threads and show an example of join and yield methods"
+
+];
+
+
+
+/* =====================================================
+   RECORDED OUTPUTS
+===================================================== */
+
+const outputs = [
+
+`hello world`,
+
+`odd 1
+odd 3
+even 2
+even 4
+odd 5
+odd 7
+odd 9
+odd 11
+even 6
+even 8
+odd 13
+odd 15
+even 10
+odd 17
+even 12
+even 14
+even 16
+odd 19
+even 18
+even 20`,
+
+`Sorted array: [10, 20, 30, 40, 50, 60]`,
+
+`Result of matrix multiplication:
+19 22
+43 50`,
+
+`Sum of prime numbers up to 20 = 77`,
+
+`https://www.google.com - Response Code: 200
+https://www.github.com - Response Code: 200
+https://www.wikipedia.org - Response Code: 403
+Web crawling completed.`,
+
+`Deposited: 500
+Balance after deposit: 1500
+Withdrawn: 300
+Balance after withdrawal: 1200
+Final balance: 1200`,
+
+`Thread 1 - 3
+Thread 3 - 4
+Thread 2 - 5
+Thread 1 - 4
+Thread 3 - 5
+Thread 1 - 5
+All threads completed.`,
+
+`Thread 1 - 4
+Thread 2 - 4
+Thread 3 - 4
+Thread 1 - 5
+Thread 2 - 5
+Thread 3 - 5
+All threads completed.`,
+
+`Second Thread - Priority: 5
+Third Thread - Priority: 10
+Third Thread - Priority: 10
+Third Thread - Priority: 10
+First Thread - Priority: 1
+First Thread - Priority: 1
+Second Thread - Priority: 5
+Third Thread - Priority: 10
+Second Thread - Priority: 5
+Second Thread - Priority: 5
+All threads completed.`,
+
+`Second Thread - 1
+Second Thread - 2
+Second Thread - 3
+Second Thread - 4
+Second Thread - 5
+First Thread - 1
+First Thread - 2
+First Thread - 3
+First Thread - 4
+First Thread - 5
+Both threads completed.`,
+
+`Thread is waiting
+Notify called
+Thread resumed after notify()
+Thread is sleeping
+Waiting for notifyAll
+Waiting for notifyAll
+NotifyAll called
+Thread woke up after sleep()
+All threads completed.`,
+
+`Thread 2 - 1
+Thread 3 - 1
+Thread 2 - 2
+Thread 3 - 2
+Thread 2 - 3
+Thread 3 - 3
+Thread 2 - 4
+Thread 3 - 4
+Thread 2 - 5
+Thread 3 - 5`
+
+];
+
+
+
+/* =====================================================
+   CREATE QUESTION BUTTONS AND CONTENT
+===================================================== */
+
+questions.forEach(function(question, index) {
+
+    const number = index + 1;
+
+
+    /* -------------------------------------------------
+       CREATE SIDEBAR BUTTON
+    ------------------------------------------------- */
+
+    const button =
+        document.createElement("button");
+
+    button.className =
+        "question-btn";
+
+    if(number === 1)
+    {
+        button.classList.add("active");
+    }
+
+    button.textContent =
+        "Question " + number;
+
+    button.onclick = function()
+    {
+        showQuestion(number);
+    };
+
+    document
+        .getElementById("questionList")
+        .appendChild(button);
+
+
+
+    /* -------------------------------------------------
+       CREATE QUESTION PAGE
+    ------------------------------------------------- */
+
+    const section =
+        document.createElement("section");
+
+    section.className =
+        "question-page";
+
+    section.id =
+        "question" + number;
+
+    if(number === 1)
+    {
+        section.classList.add("active");
+    }
+
+
+
+    /* -------------------------------------------------
+       QUESTION HEADING
+    ------------------------------------------------- */
+
+    const heading =
+        document.createElement("h2");
+
+    heading.textContent =
+        "Question " + number;
+
+
+
+    /* -------------------------------------------------
+       QUESTION BOX
+    ------------------------------------------------- */
+
+    const questionBox =
+        document.createElement("div");
+
+    questionBox.className =
+        "question-box";
+
+    questionBox.textContent =
+        question;
+
+
+
+    /* -------------------------------------------------
+       JAVA PROGRAM BOX
+    ------------------------------------------------- */
+
+    const programBox =
+        document.createElement("div");
+
+    programBox.className =
+        "program-box";
+
+
+    const programHeader =
+        document.createElement("div");
+
+    programHeader.className =
+        "program-header";
+
+
+    const programTitle =
+        document.createElement("h3");
+
+    programTitle.textContent =
+        "Java Program";
+
+
+    const javaLabel =
+        document.createElement("span");
+
+    javaLabel.className =
+        "java-label";
+
+    javaLabel.textContent =
+        ".java";
+
+
+    programHeader.appendChild(programTitle);
+
+    programHeader.appendChild(javaLabel);
+
+
+
+    /* -------------------------------------------------
+       CODE AREA
+    ------------------------------------------------- */
+
+    const codeArea =
+        document.createElement("div");
+
+    codeArea.className =
+        "code-area";
+
+
+    const code =
+        document.createElement("pre");
+
+    code.id =
+        "javaCode" + number;
+
+    code.textContent =
+        "Loading Q" + number + ".java...";
+
+
+    codeArea.appendChild(code);
+
+    programBox.appendChild(programHeader);
+
+    programBox.appendChild(codeArea);
+
+
+
+    /* -------------------------------------------------
+       OUTPUT BOX
+    ------------------------------------------------- */
+
+    const outputBox =
+        document.createElement("div");
+
+    outputBox.className =
+        "output-box";
+
+
+    const outputHeader =
+        document.createElement("div");
+
+    outputHeader.className =
+        "output-header";
+
+    outputHeader.textContent =
+        "Output";
+
+
+    const outputContent =
+        document.createElement("div");
+
+    outputContent.className =
+        "output-content";
+
+    outputContent.textContent =
+        outputs[index];
+
+
+    outputBox.appendChild(outputHeader);
+
+    outputBox.appendChild(outputContent);
+
+
+
+    /* -------------------------------------------------
+       ADD EVERYTHING TO QUESTION PAGE
+    ------------------------------------------------- */
+
+    section.appendChild(heading);
+
+    section.appendChild(questionBox);
+
+    section.appendChild(programBox);
+
+    section.appendChild(outputBox);
+
+
+    document
+        .getElementById("content")
+        .appendChild(section);
+
+});
+
+
+
+/* =====================================================
+   SHOW QUESTION
+===================================================== */
+
+function showQuestion(number)
+{
+
+    const pages =
+        document.querySelectorAll(
+            ".question-page"
+        );
+
+
+    pages.forEach(function(page)
+    {
+        page.classList.remove("active");
+    });
+
+
+
+    const buttons =
+        document.querySelectorAll(
+            ".question-btn"
+        );
+
+
+    buttons.forEach(function(button)
+    {
+        button.classList.remove("active");
+    });
+
+
+
+    const selectedPage =
+        document.getElementById(
+            "question" + number
+        );
+
+
+    if(selectedPage)
+    {
+        selectedPage.classList.add("active");
+    }
+
+
+
+    if(buttons[number - 1])
+    {
+        buttons[number - 1]
+            .classList.add("active");
+    }
+
+
+
+    document
+        .querySelector(".content")
+        .scrollTop = 0;
+
+}
+
+
+
+/* =====================================================
+   FETCH JAVA PROGRAMS AUTOMATICALLY
+===================================================== */
+
+questions.forEach(function(question, index)
+{
+
+    const number =
+        index + 1;
+
+
+    fetch("Q" + number + ".java")
+
+        .then(function(response)
+        {
+
+            if(!response.ok)
+            {
+                throw new Error(
+                    "Unable to load Q" +
+                    number +
+                    ".java"
+                );
+            }
+
+            return response.text();
+
+        })
+
+        .then(function(code)
+        {
+
+            document.getElementById(
+                "javaCode" + number
+            ).textContent = code;
+
+        })
+
+        .catch(function(error)
+        {
+
+            document.getElementById(
+                "javaCode" + number
+            ).textContent =
+                "Unable to load Q" +
+                number +
+                ".java";
+
+            console.error(error);
+
+        });
+
+});
+
+
+</script>
+
+</body>
+
+</html>

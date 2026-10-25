@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Java Programming</title>
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #0b0b0b;
+            color: white;
+        }
+
+
+
+        /* =====================================================
+           TOP NAME BAR
+        ===================================================== */
+
+        .header {
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            height: 100px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            z-index: 10;
+
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.75),
+                rgba(0,0,0,0)
+            );
+
+        }
+
+
+        .student-name {
+
+            font-size: 30px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            color: white;
+
+            text-shadow:
+                0 2px 10px rgba(0,0,0,0.8);
+
+        }
+
+
+        .student-details {
+
+            margin-top: 7px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+
+            color: #dddddd;
+
+        }
+
+
+        .student-details span {
+
+            color: #ed8b00;
+
+            font-weight: bold;
+
+            margin: 0 5px;
+
+        }
+
+
+
+        /* =====================================================
+           FULL SCREEN HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            width: 100%;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            overflow: hidden;
+
+
+            /*
+            =================================================
+            UNSPLASH BACKGROUND IMAGE
+
+            Easy to replace later.
+            =================================================
+            */
+
+            background-image:
+
+                linear-gradient(
+                    rgba(5, 5, 5, 0.55),
+                    rgba(5, 5, 5, 0.72)
+                ),
+
+                url("https://images.unsplash.com/photo-1657537272240-4af01beb5c79?auto=format&fit=crop&w=3000&q=85");
+
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+        }
+
+
+
+        /* =====================================================
+           DARK IMAGE OVERLAY
+        ===================================================== */
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+                    circle at center,
+                    transparent 20%,
+                    rgba(0,0,0,0.35) 75%,
+                    rgba(0,0,0,0.65) 100%
+                );
+
+            pointer-events: none;
+
+        }
+
+
+
+        /* =====================================================
+           ORANGE GLOW
+        ===================================================== */
+
+        .orange-glow {
+
+            position: absolute;
+
+            width: 500px;
+
+            height: 500px;
+
+            border-radius: 50%;
+
+            background: rgba(237,139,0,0.13);
+
+            filter: blur(120px);
+
+            top: -250px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            z-index: 1;
+
+        }
+
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ===================================================== */
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 5;
+
+            width: 100%;
+
+            max-width: 1350px;
+
+            padding: 150px 40px 70px;
+
+        }
+
+
+
+        /* =====================================================
+           SMALL TOP TEXT
+        ===================================================== */
+
+        .course {
+
+            font-family: Arial, sans-serif;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            letter-spacing: 6px;
+
+            text-transform: uppercase;
+
+            color: #ffae42;
+
+            margin-bottom: 25px;
+
+            text-shadow:
+                0 2px 8px black;
+
+        }
+
+
+
+        /* =====================================================
+           MAIN TITLE
+        ===================================================== */
+
+        .hero h1 {
+
+            font-size: clamp(55px, 8vw, 105px);
+
+            line-height: 1.02;
+
+            font-weight: bold;
+
+            color: white;
+
+            margin-bottom: 20px;
+
+            text-shadow:
+
+                0 4px 15px rgba(0,0,0,0.9),
+
+                0 0 30px rgba(0,0,0,0.5);
+
+        }
+
+
+        .hero h1 span {
+
+            color: #ed8b00;
+
+        }
+
+
+
+        /* =====================================================
+           SUBTITLE
+        ===================================================== */
+
+        .subtitle {
+
+            font-family: Arial, sans-serif;
+
+            font-size: 18px;
+
+            color: #eeeeee;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 55px;
+
+            text-shadow:
+                0 2px 8px black;
+
+        }
+
+
+
+        /* =====================================================
+           TOPIC BUTTON AREA
+        ===================================================== */
+
+        .topics {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 17px;
+
+        }
+
+
+
+        /* =====================================================
+           TOPIC BUTTON
+        ===================================================== */
+
+        .topic {
+
+            position: relative;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+            padding: 17px 25px;
+
+            border-radius: 9px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(35,35,35,0.78),
+                    rgba(15,15,15,0.65)
+                );
+
+            border: 1px solid rgba(255,255,255,0.18);
+
+            backdrop-filter: blur(9px);
+
+            box-shadow:
+
+                0 8px 25px rgba(0,0,0,0.45),
+
+                inset 0 1px rgba(255,255,255,0.08);
+
+            transition: all 0.3s ease;
+
+            overflow: hidden;
+
+        }
+
+
+
+        /* Orange line */
+
+        .topic::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: 0;
+
+            width: 100%;
+
+            height: 3px;
+
+            background: #ed8b00;
+
+            transform: scaleX(0);
+
+            transition: transform 0.3s ease;
+
+        }
+
+
+
+        /* Hover */
+
+        .topic:hover {
+
+            transform: translateY(-6px) scale(1.02);
+
+            color: white;
+
+            border-color: rgba(237,139,0,0.75);
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(237,139,0,0.30),
+                    rgba(20,20,20,0.72)
+                );
+
+            box-shadow:
+
+                0 12px 30px rgba(0,0,0,0.55),
+
+                0 0 22px rgba(237,139,0,0.20);
+
+        }
+
+
+        .topic:hover::before {
+
+            transform: scaleX(1);
+
+        }
+
+
+
+        /* =====================================================
+           NUMBER
+        ===================================================== */
+
+        .number {
+
+            color: #ed8b00;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            margin-right: 9px;
+
+        }
+
+
+
+        /* =====================================================
+           BOTTOM TEXT
+        ===================================================== */
+
+        .bottom-text {
+
+            margin-top: 45px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            color: #cccccc;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            text-shadow:
+                0 2px 8px black;
+
+        }
+
+
+        .bottom-text span {
+
+            color: #ed8b00;
+
+        }
+
+
+
+        /* =====================================================
+           DECORATIVE JAVA SYMBOLS
+        ===================================================== */
+
+        .symbol-left {
+
+            position: absolute;
+
+            left: 35px;
+
+            bottom: 40px;
+
+            font-family: "Courier New", monospace;
+
+            font-size: 80px;
+
+            color: rgba(237,139,0,0.13);
+
+            z-index: 2;
+
+        }
+
+
+        .symbol-right {
+
+            position: absolute;
+
+            right: 35px;
+
+            top: 150px;
+
+            font-family: "Courier New", monospace;
+
+            font-size: 80px;
+
+            color: rgba(237,139,0,0.13);
+
+            z-index: 2;
+
+        }
+
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .hero-content {
+
+                padding-left: 25px;
+
+                padding-right: 25px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 65px;
+
+            }
+
+
+            .topics {
+
+                max-width: 750px;
+
+            }
+
+
+            .topic {
+
+                font-size: 16px;
+
+                padding: 15px 20px;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .header {
+
+                height: 85px;
+
+            }
+
+
+            .student-name {
+
+                font-size: 21px;
+
+                letter-spacing: 2px;
+
+            }
+
+
+            .student-details {
+
+                font-size: 9px;
+
+                letter-spacing: 1px;
+
+            }
+
+
+            .hero {
+
+                background-attachment: scroll;
+
+                background-position: center;
+
+            }
+
+
+            .hero-content {
+
+                padding:
+
+                    130px
+                    18px
+                    50px;
+
+            }
+
+
+            .course {
+
+                font-size: 10px;
+
+                letter-spacing: 3px;
+
+                margin-bottom: 20px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 45px;
+
+                line-height: 1.05;
+
+            }
+
+
+            .subtitle {
+
+                font-size: 13px;
+
+                line-height: 1.6;
+
+                margin-bottom: 35px;
+
+            }
+
+
+            .topics {
+
+                flex-direction: column;
+
+                align-items: center;
+
+                gap: 10px;
+
+            }
+
+
+            .topic {
+
+                width: 100%;
+
+                max-width: 370px;
+
+                font-size: 15px;
+
+                padding: 14px 18px;
+
+            }
+
+
+            .bottom-text {
+
+                font-size: 9px;
+
+                letter-spacing: 2px;
+
+                margin-top: 30px;
+
+            }
+
+
+            .symbol-left,
+            .symbol-right {
+
+                display: none;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           VERY SMALL SCREEN
+        ===================================================== */
+
+        @media (max-width: 380px) {
+
+            .hero h1 {
+
+                font-size: 38px;
+
+            }
+
+
+            .student-name {
+
+                font-size: 18px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="header">
+
+        <div>
+
+            <div class="student-name">
+                KRITIMA
+            </div>
+
+            <div class="student-details">
+
+                BCA
+                <span>•</span>
+                3rd Year
+                <span>•</span>
+                5th Semester
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN HERO
+    ===================================================== -->
+
+    <section class="hero">
+
+
+        <div class="orange-glow"></div>
+
+
+        <!-- Decorative Java brackets -->
+
+        <div class="symbol-left">
+            {
+        </div>
+
+
+        <div class="symbol-right">
+            }
+        </div>
+
+
+
+        <div class="hero-content">
+
+
+            <div class="course">
+                Java Programming Practical
+            </div>
+
+
+
+            <h1>
+
+                Java Programming<br>
+
+                <span>Language - Topics</span>
+
+            </h1>
+
+
+
+            <p class="subtitle">
+
+                BCA 3rd Year &nbsp;•&nbsp;
+                5th Semester &nbsp;•&nbsp;
+                Practical Programs
+
+            </p>
+
+
+
+            <!-- =================================================
+                 TOPICS
+            ================================================== -->
+
+            <div class="topics">
+
+
+                <a
+                    href="BasicPrograms/Basic.html"
+                    class="topic">
+
+                    <span class="number">01</span>
+
+                    Basic Programming Constructs
+
+                </a>
+
+
+
+                <a
+                    href="single_dimensional_array/Array.html"
+                    class="topic">
+
+                    <span class="number">02</span>
+
+                    Single Dimensional Arrays
+ 
+                </a>
+
+
+
+                <a
+                   
+    href="./multidimensionalarrays/MultiArray.html"
+    class="topic">
+                    
+
+                    <span class="number">03</span>
+
+                    Multi Dimensional Arrays
+
+                </a>
+
+
+
+                <a
+                    href="StringPrograms/string.html"
+                    class="topic">
+
+                    <span class="number">04</span>
+
+                    Strings
+
+                </a>
+
+
+
+                <a
+                    href="OopsPrograms/oop.html"
+                    class="topic">
+
+                    <span class="number">05</span>
+
+                    Object Oriented Programming
+
+                </a>
+
+
+
+                <a
+                    href="InheritancePrograms/inheritance.html"
+                    class="topic">
+
+                    <span class="number">06</span>
+
+                    Inheritance
+
+                </a>
+
+
+
+                <a
+                    href="ExceptionPrograms/exception.html"
+                    class="topic">
+
+                    <span class="number">07</span>
+
+                    Exception Handling
+
+                </a>
+
+
+
+                <a
+                    href="MultithreadingPrograms/thread.html"
+                    class="topic">
+
+                    <span class="number">08</span>
+
+                    Multithreading
+
+                </a>
+
+                
+                <a
+                    href="packagesPrograms/packages.html"
+                    class="topic">
+
+                    <span class="number">09</span>
+
+                    Packages 
+
+                </a>
+
+                
+                <a
+                    href="interfaces/interface.html"
+                    class="topic">
+
+                    <span class="number">08</span>
+
+                    Interfaces
+
+                </a>
+
+
+            </div>
+
+
+
+            <div class="bottom-text">
+
+                <span>08</span>
+                Practical Topics
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

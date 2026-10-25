@@ -1,0 +1,1400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Basic Programming Constructs | Java Practical</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         TOP HEADER
+    ====================================================== -->
+
+    <header class="top-header">
+
+        <div class="student">
+
+            <div class="student-name">
+                KRITIMA
+            </div>
+
+            <div class="student-details">
+                BCA
+                <span>•</span>
+                3rd Year
+                <span>•</span>
+                5th Semester
+            </div>
+
+        </div>
+
+        <div class="page-title">
+
+            <h1>
+                Java Programming
+            </h1>
+
+            <p>
+                Practical Programs
+            </p>
+
+        </div>
+
+        <a href="../index.html" class="home-btn">
+            ← HOME
+        </a>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         TOPIC NAVIGATION
+    ====================================================== -->
+
+    <nav class="topic-nav">
+
+        <a href="../index.html">HOME</a>
+        <a href="basic_programming/Basic.html" class="active">Basic Programming</a>
+        <a href="../single_dimensional_array/Array.html">Single  Dimensional Arrays</a>
+        <a href="../multi_dimensional_array/MultiArray.html">Multi Dimensional Arrays</a>
+        <a href="../StringPrograms/string.html">Strings</a>
+        <a href="../OopsPrograms/oop.html">OOP</a>
+        <a href="../InheritancePrograms/inheritance.html">Inheritance</a>
+        <a href="../ExceptionPrograms/exception.html">Exception Handling</a>
+        <a href="../MultithreadingPrograms/thread.html">Multithreading</a>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         MAIN LAYOUT
+    ====================================================== -->
+
+    <div class="main-container">
+
+
+        <!-- =================================================
+             LEFT QUESTION SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <h2>Questions <span>•</span> 50</h2>
+            </div>
+
+            <div class="question-list">
+
+                <button class="question-btn active" onclick="showQuestion(1)">01. Print Hello World</button>
+                <button class="question-btn" onclick="showQuestion(2)">02. Add Two Numbers</button>
+                <button class="question-btn" onclick="showQuestion(3)">03. Multiply Two Numbers</button>
+                <button class="question-btn" onclick="showQuestion(4)">04. Perform Arithmetic Operations</button>
+                <button class="question-btn" onclick="showQuestion(5)">05. Calculate Average of Five Numbers</button>
+                <button class="question-btn" onclick="showQuestion(6)">06. Swap Two Numbers</button>
+                <button class="question-btn" onclick="showQuestion(7)">07. Convert Decimal to Binary</button>
+                <button class="question-btn" onclick="showQuestion(8)">08. Convert Binary to Decimal</button>
+                <button class="question-btn" onclick="showQuestion(9)">09. Display Java Version</button>
+                <button class="question-btn" onclick="showQuestion(10)">10. Find Sum of Digits</button>
+                <button class="question-btn" onclick="showQuestion(11)">11. Find Smaller of Two Numbers</button>
+                <button class="question-btn" onclick="showQuestion(12)">12. Count Letters, Spaces, Digits and Other Characters</button>
+                <button class="question-btn" onclick="showQuestion(13)">13. Find ASCII Value of a Character</button>
+                <button class="question-btn" onclick="showQuestion(14)">14. Calculate Sum of Natural Numbers</button>
+                <button class="question-btn" onclick="showQuestion(15)">15. Display Current Date and Time</button>
+                <button class="question-btn" onclick="showQuestion(16)">16. Print Odd Numbers from 1 to 20</button>
+                <button class="question-btn" onclick="showQuestion(17)">17. Print Even Numbers from 1 to 20</button>
+                <button class="question-btn" onclick="showQuestion(18)">18. Reverse a Number</button>
+                <button class="question-btn" onclick="showQuestion(19)">19. Convert Seconds into Hours, Minutes and Seconds</button>
+                <button class="question-btn" onclick="showQuestion(20)">20. Sum of First 100 Prime Numbers</button>
+                <button class="question-btn" onclick="showQuestion(21)">21. Swap First and Last Array Elements</button>
+                <button class="question-btn" onclick="showQuestion(22)">22. Count Even and Odd Array Elements</button>
+                <button class="question-btn" onclick="showQuestion(23)">23. Find Square Root of a Number</button>
+                <button class="question-btn" onclick="showQuestion(24)">24. Check Palindrome Number</button>
+                <button class="question-btn" onclick="showQuestion(25)">25. Add Two Numbers Using a Method</button>
+                <button class="question-btn" onclick="showQuestion(26)">26. Find Sum of Digits of a Number</button>
+                <button class="question-btn" onclick="showQuestion(27)">27. Calculate Area of a Circle</button>
+                <button class="question-btn" onclick="showQuestion(28)">28. Calculate Area of a Rectangle</button>
+                <button class="question-btn" onclick="showQuestion(29)">29. Calculate Area of a Triangle</button>
+                <button class="question-btn" onclick="showQuestion(30)">30. Calculate Area of an Equilateral Triangle</button>
+                <button class="question-btn" onclick="showQuestion(31)">31. Check Prime Number</button>
+                <button class="question-btn" onclick="showQuestion(32)">32. Check Armstrong Number</button>
+                <button class="question-btn" onclick="showQuestion(33)">33. Check Palindrome Number</button>
+                <button class="question-btn" onclick="showQuestion(34)">34. Check Perfect Number</button>
+                <button class="question-btn" onclick="showQuestion(35)">35. Calculate Factorial</button>
+                <button class="question-btn" onclick="showQuestion(36)">36. Print Fibonacci Series</button>
+                <button class="question-btn" onclick="showQuestion(37)">37. Reverse a Number</button>
+                <button class="question-btn" onclick="showQuestion(38)">38. Find Sum of Digits</button>
+                <button class="question-btn" onclick="showQuestion(39)">39. Check Odd or Even</button>
+                <button class="question-btn" onclick="showQuestion(40)">40. Find Largest of Three Numbers</button>
+                <button class="question-btn" onclick="showQuestion(41)">41. Check Leap Year</button>
+                <button class="question-btn" onclick="showQuestion(42)">42. Check Vowel or Consonant</button>
+                <button class="question-btn" onclick="showQuestion(43)">43. Simple Calculator Using Switch</button>
+                <button class="question-btn" onclick="showQuestion(44)">44. Print Multiplication Table</button>
+                <button class="question-btn" onclick="showQuestion(45)">45. Check Positive or Negative Number</button>
+                <button class="question-btn" onclick="showQuestion(46)">46. Sum of Natural Numbers</button>
+                <button class="question-btn" onclick="showQuestion(47)">47. Check Divisibility by 5 and 11</button>
+                <button class="question-btn" onclick="showQuestion(48)">48. Count Digits in a Number</button>
+                <button class="question-btn" onclick="showQuestion(49)">49. Check Strong Number</button>
+                <button class="question-btn" onclick="showQuestion(50)">50. Check Automorphic Number</button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <main class="content">
+
+            <section class="question-page active" id="question1">
+                <h1 class="question-heading">Question <span>01</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to print Hello World!</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode1" class="code-placeholder">Loading Q1.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Hello World!</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question2">
+                <h1 class="question-heading">Question <span>02</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to add two numbers.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode2" class="code-placeholder">Loading Q2.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Sum = 40</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question3">
+                <h1 class="question-heading">Question <span>03</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to multiply two numbers.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode3" class="code-placeholder">Loading Q3.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Product = 91</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question4">
+                <h1 class="question-heading">Question <span>04</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to perform addition, multiplication, subtraction, division and remainder operations on two numbers.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode4" class="code-placeholder">Loading Q4.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Sum = 34
+Multiplication = 168
+Subtraction = 22
+Division = 4
+Remainder = 4</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question5">
+                <h1 class="question-heading">Question <span>05</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to calculate the average of five numbers.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode5" class="code-placeholder">Loading Q5.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Average = 34.0</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question6">
+                <h1 class="question-heading">Question <span>06</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to swap two numbers.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode6" class="code-placeholder">Loading Q6.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Value of a = 80
+Value of b = 40</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question7">
+                <h1 class="question-heading">Question <span>07</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to convert a decimal number into binary.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode7" class="code-placeholder">Loading Q7.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Binary number = 10101101</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question8">
+                <h1 class="question-heading">Question <span>08</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to convert a binary number into decimal.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode8" class="code-placeholder">Loading Q8.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Decimal number = 214</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question9">
+                <h1 class="question-heading">Question <span>09</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to display the installed Java version.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode9" class="code-placeholder">Loading Q9.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Java version: 26.0.1
+</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question10">
+                <h1 class="question-heading">Question <span>10</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to find the sum of the digits of a number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode10" class="code-placeholder">Loading Q10.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Sum of digits = 23</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question11">
+                <h1 class="question-heading">Question <span>11</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to find the smaller of two numbers.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode11" class="code-placeholder">Loading Q11.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">48 is smaller than 63</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question12">
+                <h1 class="question-heading">Question <span>12</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to count letters, spaces, digits and other characters in a string.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode12" class="code-placeholder">Loading Q12.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a string:             
+today is sunday 
+Letters = 13
+Spaces = 3
+Numbers = 0
+Other characters = 0</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question13">
+                <h1 class="question-heading">Question <span>13</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to find the ASCII value of a character.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode13" class="code-placeholder">Loading Q13.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a character:
+A
+ASCII value = 65</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question14">
+                <h1 class="question-heading">Question <span>14</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to calculate the sum of the first 100 natural numbers.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode14" class="code-placeholder">Loading Q14.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+7
+Sum = 861
+PS C:\Users\Kritima\OneDrive\Desktop\java_website</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question15">
+                <h1 class="question-heading">Question <span>15</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to display the current date and time.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode15" class="code-placeholder">Loading Q15.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Current system time: Sun Oct 25 14:50:00 IST 2026</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question16">
+                <h1 class="question-heading">Question <span>16</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to print odd numbers from 1 to 20.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode16" class="code-placeholder">Loading Q16.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">1
+3
+5
+7
+9
+11
+13
+15
+17
+19</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question17">
+                <h1 class="question-heading">Question <span>17</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to print even numbers from 1 to 20.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode17" class="code-placeholder">Loading Q17.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">2
+4
+6
+8
+10
+12
+14
+16
+18
+20</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question18">
+                <h1 class="question-heading">Question <span>18</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to reverse a number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode18" class="code-placeholder">Loading Q18.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">12
+Integer value = 12</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question19">
+                <h1 class="question-heading">Question <span>19</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to convert a number of seconds into hours, minutes and seconds.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode19" class="code-placeholder">Loading Q19.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter seconds:
+9374
+Hours = 2
+Minutes = 36
+Seconds = 14</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question20">
+                <h1 class="question-heading">Question <span>20</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to calculate the sum of the first 100 prime numbers.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode20" class="code-placeholder">Loading Q20.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Sum of first 100 prime numbers = 24133</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question21">
+                <h1 class="question-heading">Question <span>21</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to swap the first and last elements of an array.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode21" class="code-placeholder">Loading Q21.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">New array after swapping: [50, 20, 30, 40, 10]</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question22">
+                <h1 class="question-heading">Question <span>22</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to count the even and odd elements in an array.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode22" class="code-placeholder">Loading Q22.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter the size of array:
+5
+Enter array elements:
+12 7 24 19 30
+Number of even elements = 3
+Number of odd elements = 2</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question23">
+                <h1 class="question-heading">Question <span>23</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to find the square root of a number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode23" class="code-placeholder">Loading Q23.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+16
+Square root = 4.0</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question24">
+                <h1 class="question-heading">Question <span>24</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a number is a palindrome.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode24" class="code-placeholder">Loading Q24.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a positive number:
+12321
+Palindrome number</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question25">
+                <h1 class="question-heading">Question <span>25</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to add two numbers using a method.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode25" class="code-placeholder">Loading Q25.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter first number:
+25
+Enter second number:
+37
+Sum = 62</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question26">
+                <h1 class="question-heading">Question <span>26</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to find the sum of the digits of a number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode26" class="code-placeholder">Loading Q26.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a positive integer:
+5837
+Sum of digits = 23</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question27">
+                <h1 class="question-heading">Question <span>27</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to calculate the area of a circle.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode27" class="code-placeholder">Loading Q27.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter radius of circle:
+7
+Area of circle = 153.93804002589985</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question28">
+                <h1 class="question-heading">Question <span>28</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to calculate the area of a rectangle.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode28" class="code-placeholder">Loading Q28.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter length:
+10
+Enter breadth:
+5
+Area of rectangle = 50.0</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question29">
+                <h1 class="question-heading">Question <span>29</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to calculate the area of a triangle.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode29" class="code-placeholder">Loading Q29.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter base of triangle:
+10
+Enter height of triangle:
+6
+Area of triangle = 30.0</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question30">
+                <h1 class="question-heading">Question <span>30</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to calculate the area of an equilateral triangle.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode30" class="code-placeholder">Loading Q30.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter side of triangle:
+4
+Area of equilateral triangle = 6.928203230275509</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question31">
+                <h1 class="question-heading">Question <span>31</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a number is prime.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode31" class="code-placeholder">Loading Q31.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+17
+Prime number</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question32">
+                <h1 class="question-heading">Question <span>32</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a number is an Armstrong number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode32" class="code-placeholder">Loading Q32.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+153
+Armstrong number</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question33">
+                <h1 class="question-heading">Question <span>33</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a number is a palindrome.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode33" class="code-placeholder">Loading Q33.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+12321
+Palindrome number</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question34">
+                <h1 class="question-heading">Question <span>34</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a number is a perfect number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode34" class="code-placeholder">Loading Q34.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+28
+Perfect number</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question35">
+                <h1 class="question-heading">Question <span>35</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to calculate the factorial of a number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode35" class="code-placeholder">Loading Q35.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+5
+Factorial = 120</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question36">
+                <h1 class="question-heading">Question <span>36</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to print the Fibonacci series.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode36" class="code-placeholder">Loading Q36.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter number of terms:
+7
+Fibonacci Series:
+0 1 1 2 3 5 8</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question37">
+                <h1 class="question-heading">Question <span>37</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to reverse a number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode37" class="code-placeholder">Loading Q37.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+12345
+Reversed number = 54321</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question38">
+                <h1 class="question-heading">Question <span>38</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to find the sum of the digits of a number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode38" class="code-placeholder">Loading Q38.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+5837
+Sum of digits = 23</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question39">
+                <h1 class="question-heading">Question <span>39</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a number is odd or even.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode39" class="code-placeholder">Loading Q39.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+8
+Even number</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question40">
+                <h1 class="question-heading">Question <span>40</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to find the largest of three numbers.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode40" class="code-placeholder">Loading Q40.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter first number:
+10
+Enter second number:
+25
+Enter third number:
+15
+Largest number = 25</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question41">
+                <h1 class="question-heading">Question <span>41</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a year is a leap year.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode41" class="code-placeholder">Loading Q41.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a year:
+2024
+Leap year</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question42">
+                <h1 class="question-heading">Question <span>42</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a character is a vowel.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode42" class="code-placeholder">Loading Q42.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a character:
+a
+Vowel</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question43">
+                <h1 class="question-heading">Question <span>43</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create a simple calculator using a switch statement.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode43" class="code-placeholder">Loading Q43.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter first number:
+10
+Enter second number:
+5
+Enter operator (+, -, *, /):
++
+Result = 15.0</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question44">
+                <h1 class="question-heading">Question <span>44</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to print the multiplication table of a number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode44" class="code-placeholder">Loading Q44.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+17
+17 x 1 = 17
+17 x 2 = 34
+17 x 3 = 51
+17 x 4 = 68
+17 x 5 = 85
+17 x 6 = 102
+17 x 7 = 119
+17 x 8 = 136
+17 x 9 = 153
+17 x 10 = 170</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question45">
+                <h1 class="question-heading">Question <span>45</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a number is positive or negative.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode45" class="code-placeholder">Loading Q45.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+-3
+Negative number</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question46">
+                <h1 class="question-heading">Question <span>46</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to calculate the sum of natural numbers up to a given number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode46" class="code-placeholder">Loading Q46.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+5
+Sum = 15</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question47">
+                <h1 class="question-heading">Question <span>47</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a number is divisible by both 5 and 11.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode47" class="code-placeholder">Loading Q47.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+55
+Number is divisible by 5 and 11</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question48">
+                <h1 class="question-heading">Question <span>48</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to count the digits in a number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode48" class="code-placeholder">Loading Q48.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+12345
+Number of digits = 5</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question49">
+                <h1 class="question-heading">Question <span>49</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a number is a strong number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode49" class="code-placeholder">Loading Q49.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+145
+Strong number</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question50">
+                <h1 class="question-heading">Question <span>50</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to check whether a number is an automorphic number.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode50" class="code-placeholder">Loading Q50.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Enter a number:
+25
+Automorphic number</pre></div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        function showQuestion(number) {
+
+            const questions = document.querySelectorAll(".question-page");
+            questions.forEach(function(question) {
+                question.classList.remove("active");
+            });
+
+            const buttons = document.querySelectorAll(".question-btn");
+            buttons.forEach(function(button) {
+                button.classList.remove("active");
+            });
+
+            const selectedQuestion = document.getElementById("question" + number);
+            if (selectedQuestion) {
+                selectedQuestion.classList.add("active");
+            }
+
+            buttons[number - 1].classList.add("active");
+
+            document.querySelector(".content").scrollTop = 0;
+
+        }
+
+        // Load Q1.java to Q50.java from the same folder as this HTML file.
+        for (let i = 1; i <= 50; i++) {
+            fetch("Q" + i + ".java")
+                .then(function(response) {
+                    if (!response.ok) {
+                        throw new Error("HTTP " + response.status);
+                    }
+                    return response.text();
+                })
+                .then(function(code) {
+                    const codeElement = document.getElementById("javaCode" + i);
+                    if (codeElement) codeElement.textContent = code;
+                })
+                .catch(function(error) {
+                    const codeElement = document.getElementById("javaCode" + i);
+                    if (codeElement) {
+                        codeElement.textContent = "Unable to load Q" + i + ".java. Check that the file is in the same folder as this HTML file.";
+                    }
+                    console.error("Could not load Q" + i + ".java:", error);
+                });
+        }
+
+    </script>
+
+
+</body>
+
+</html>

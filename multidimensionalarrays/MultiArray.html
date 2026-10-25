@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Multi Dimensional Array | Java Practical</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     TOP HEADER
+====================================================== -->
+
+<header class="top-header">
+
+<div class="student">
+
+    <div class="student-name">
+        KRITIMA
+    </div>
+
+    <div class="student-details">
+        BCA
+        <span>•</span>
+        3rd Year
+        <span>•</span>
+        5th Semester
+    </div>
+
+</div>
+
+<div class="page-title">
+
+    <h1>
+        Java Programming
+    </h1>
+
+    <p>
+        Practical Programs
+    </p>
+
+</div>
+
+<a href="../index.html" class="home-btn">
+    ← HOME
+</a>
+
+</header>
+
+
+<!-- =====================================================
+     TOPIC NAVIGATION
+====================================================== -->
+
+<nav class="topic-nav">
+
+<a href="../index.html">HOME</a>
+
+<a href="../BasicPrograms/Basic.html">
+    Basic Programming
+</a>
+
+<a href="../single_dimensional_array/Array.html">
+    Single Arrays
+</a>
+  <a href="../interfaces/interface.html" >
+    Interfaces</a>
+
+<a href="MultiArray.html" class="active">
+    Multi Arrays
+</a>
+
+<a href="../StringPrograms/string.html">
+    Strings
+</a>
+
+<a href="../OopsPrograms/oop.html">
+    OOP
+</a>
+
+<a href="../InheritancePrograms/inheritance.html">
+    Inheritance
+</a>
+
+<a href="../ExceptionPrograms/exception.html">
+    Exception Handling
+</a>
+
+<a href="../MultithreadingPrograms/thread.html">
+    Multithreading
+</a>
+
+</nav>
+
+
+<!-- =====================================================
+     MAIN LAYOUT
+====================================================== -->
+
+<div class="main-container">
+
+
+<!-- =================================================
+     LEFT QUESTION SIDEBAR
+================================================== -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-header">
+
+        <h2>
+            Questions <span>•</span> 13
+        </h2>
+
+    </div>
+
+    <div class="question-list" id="questionList"></div>
+
+</aside>
+
+
+<!-- =================================================
+     CONTENT
+================================================== -->
+
+<main class="content" id="content">
+
+</main>
+
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+/*
+ * =====================================================
+ * MULTI DIMENSIONAL ARRAY QUESTIONS
+ * =====================================================
+ */
+
+const questions = [
+
+    "Enter matrix rows and columns from user and print the matrix",
+
+    "Program to add two matrices",
+
+    "Program to multiply two matrices",
+
+    "Program to subtract two matrices",
+
+    "Program to determine whether two matrices are equal",
+
+    "Display lower triangular matrix",
+
+    "Display upper triangular matrix",
+
+    "Find the frequency of odd and even numbers in a matrix",
+
+    "Find the sum of each row and each column",
+
+    "Find the transpose of a given matrix",
+
+    "Determine whether a matrix is an identity matrix",
+
+    "Transpose matrix",
+
+    "Determine whether a matrix is a sparse matrix"
+
+];
+
+
+/*
+ * =====================================================
+ * JAVA PROGRAM FILES
+ * =====================================================
+ *
+ * The Java programs are NOT written inside this HTML.
+ * They are fetched automatically from the .java files.
+ *
+ * Q12 uses the same program as Q10.
+ * Q6 and Q7 were skipped.
+ */
+
+const programFiles = [
+
+    "Q1.java",
+    "Q2.java",
+    "Q3.java",
+    "Q4.java",
+    "Q5.java",
+    null,
+    null,
+    "Q8.java",
+    "Q9.java",
+    "Q10.java",
+    "Q11.java",
+    "Q10.java",
+    "Q13.java"
+
+];
+
+
+/*
+ * =====================================================
+ * OUTPUTS
+ * =====================================================
+ *
+ * Only the outputs that were actually run are stored here.
+ * The Java programs themselves are fetched automatically.
+ */
+
+const outputs = [
+
+    // Q1
+    `Enter number of rows: 3
+Enter number of columns: 2
+Enter the elements of the matrix:
+10
+20
+5
+6
+7
+5
+The matrix is:
+10 20
+5 6
+7 5`,
+
+    // Q2
+    `Enter number of rows: 2
+Enter number of columns: 2
+Enter elements of first matrix:
+1
+5
+7
+8
+Enter elements of second matrix:
+6
+3
+5
+4
+First matrix:
+1 5
+7 8
+Second matrix:
+6 3
+5 4
+Sum of two matrices:
+7 8
+12 12`,
+
+    // Q3
+    `Enter rows of first matrix: 3
+Enter columns of first matrix: 3
+Enter rows of second matrix: 3
+Enter columns of second matrix: 3
+Enter elements of first matrix:
+10
+23
+87
+12
+7
+65
+32
+52
+58
+Enter elements of second matrix:
+84
+88
+7
+0
+6
+1
+5
+7
+2
+First matrix:
+10 23 87
+12 7 65
+32 52 58
+Second matrix:
+84 88 7
+0 6 1
+5 7 2
+Multiplication of two matrices:
+1275 1627 267
+1333 1553 221
+2978 3534 392`,
+
+    // Q4
+    `Enter number of rows: 2
+Enter number of columns: 2
+Enter elements of first matrix:
+1
+5
+7
+6
+Enter elements of second matrix:
+5
+1
+7
+3
+First matrix:
+1 5
+7 6
+Second matrix:
+5 1
+7 3
+Subtraction of two matrices:
+-4 4
+0 3`,
+
+    // Q5
+    `Enter rows of first matrix: 2
+Enter columns of first matrix: 2
+Enter rows of second matrix: 2
+Enter columns of second matrix: 2
+Enter elements of first matrix:
+5
+5
+9
+3
+Enter elements of second matrix:
+4
+6
+7
+3
+Matrices are not equal.`,
+
+    // Q6
+    null,
+
+    // Q7
+    null,
+
+    // Q8
+    `Enter number of rows: 2
+Enter number of columns: 2
+Enter the elements of the matrix:
+2
+4
+6
+8
+The matrix is:
+2 4
+6 8
+Frequency of even numbers: 4
+Frequency of odd numbers: 0`,
+
+    // Q9
+    `Enter number of rows: 2
+Enter number of columns: 2
+Enter elements of the matrix:
+3
+6
+4
+5
+The matrix is:
+3 6
+4 5
+Sum of row 1: 9
+Sum of row 2: 9
+Sum of column 1: 7
+Sum of column 2: 11`,
+
+    // Q10
+    `Enter number of rows: 3
+Enter number of columns: 3
+Enter elements of the matrix:
+1
+2
+4
+3
+6
+5
+8
+4
+63
+The matrix is:
+1 2 4
+3 6 5
+8 4 63
+Transpose of the matrix:
+1 3 8
+2 6 4
+4 5 63`,
+
+    // Q11
+    `Enter number of rows: 2
+Enter number of columns: 2
+Enter elements of the matrix:
+12
+5
+3
+4
+The matrix is:
+12 5
+3 4
+Matrix is not an identity matrix.`,
+
+    // Q12
+    `Same program as Question 10.
+Use the Q10 output shown above.`,
+
+    // Q13
+    `Output not recorded yet.`
+
+];
+
+
+/*
+ * =====================================================
+ * CREATE SIDEBAR BUTTONS AND QUESTION PAGES
+ * =====================================================
+ */
+
+const questionList =
+    document.getElementById("questionList");
+
+const content =
+    document.getElementById("content");
+
+
+questions.forEach(function(question, index) {
+
+    const number = index + 1;
+
+
+    /*
+     * -------------------------------------------------
+     * CREATE SIDEBAR BUTTON
+     * -------------------------------------------------
+     */
+
+    const button =
+        document.createElement("button");
+
+    button.className =
+        "question-btn";
+
+    if(number === 1) {
+
+        button.classList.add("active");
+
+    }
+
+    button.textContent =
+        "Question " + number;
+
+    button.onclick = function() {
+
+        showQuestion(number);
+
+    };
+
+    questionList.appendChild(button);
+
+
+    /*
+     * -------------------------------------------------
+     * CREATE QUESTION PAGE
+     * -------------------------------------------------
+     */
+
+    const section =
+        document.createElement("section");
+
+    section.className =
+        "question-page";
+
+    if(number === 1) {
+
+        section.classList.add("active");
+
+    }
+
+    section.id =
+        "question" + number;
+
+
+    /*
+     * -------------------------------------------------
+     * QUESTION HEADING
+     * -------------------------------------------------
+     */
+
+    const heading =
+        document.createElement("h1");
+
+    heading.className =
+        "question-heading";
+
+    heading.innerHTML =
+        'Question <span>' +
+        String(number).padStart(2, "0") +
+        '</span>';
+
+
+    /*
+     * -------------------------------------------------
+     * QUESTION BOX
+     * -------------------------------------------------
+     */
+
+    const questionBox =
+        document.createElement("div");
+
+    questionBox.className =
+        "question-box";
+
+
+    const boxTitle =
+        document.createElement("div");
+
+    boxTitle.className =
+        "box-title";
+
+    boxTitle.textContent =
+        "Question";
+
+
+    const questionText =
+        document.createElement("div");
+
+    questionText.className =
+        "question-placeholder";
+
+    questionText.textContent =
+        question;
+
+
+    questionBox.appendChild(boxTitle);
+
+    questionBox.appendChild(questionText);
+
+
+    /*
+     * -------------------------------------------------
+     * JAVA PROGRAM BOX
+     * -------------------------------------------------
+     */
+
+    const programBox =
+        document.createElement("div");
+
+    programBox.className =
+        "program-box";
+
+
+    const programHeader =
+        document.createElement("div");
+
+    programHeader.className =
+        "program-header";
+
+
+    const programTitle =
+        document.createElement("h3");
+
+    programTitle.textContent =
+        "Java Program";
+
+
+    const javaLabel =
+        document.createElement("span");
+
+    javaLabel.className =
+        "java-label";
+
+    javaLabel.textContent =
+        ".java";
+
+
+    programHeader.appendChild(programTitle);
+
+    programHeader.appendChild(javaLabel);
+
+
+    const codeArea =
+        document.createElement("div");
+
+    codeArea.className =
+        "code-area";
+
+
+    const code =
+        document.createElement("pre");
+
+    code.id =
+        "javaCode" + number;
+
+    code.textContent =
+        programFiles[index]
+            ? "Loading " + programFiles[index] + "..."
+            : "Program skipped.";
+
+
+    codeArea.appendChild(code);
+
+
+    programBox.appendChild(programHeader);
+
+    programBox.appendChild(codeArea);
+
+
+    /*
+     * -------------------------------------------------
+     * OUTPUT BOX
+     * -------------------------------------------------
+     */
+
+    const outputBox =
+        document.createElement("div");
+
+    outputBox.className =
+        "output-box";
+
+
+    const outputHeader =
+        document.createElement("div");
+
+    outputHeader.className =
+        "output-header";
+
+    outputHeader.textContent =
+        "Output";
+
+
+    const outputContent =
+        document.createElement("div");
+
+    outputContent.className =
+        "output-content";
+
+
+    /*
+     * Add the recorded output.
+     */
+
+    if(number === 12) {
+
+        outputContent.textContent =
+            outputs[index];
+
+    }
+    else if(outputs[index]) {
+
+        outputContent.textContent =
+            outputs[index];
+
+    }
+    else {
+
+        outputContent.textContent =
+            "Program skipped.";
+
+    }
+
+
+    outputBox.appendChild(outputHeader);
+
+    outputBox.appendChild(outputContent);
+
+
+    /*
+     * -------------------------------------------------
+     * ADD EVERYTHING TO SECTION
+     * -------------------------------------------------
+     */
+
+    section.appendChild(heading);
+
+    section.appendChild(questionBox);
+
+    section.appendChild(programBox);
+
+    section.appendChild(outputBox);
+
+
+    content.appendChild(section);
+
+});
+
+
+/*
+ * =====================================================
+ * SHOW QUESTION
+ * =====================================================
+ */
+
+function showQuestion(number) {
+
+    const questions =
+        document.querySelectorAll(".question-page");
+
+
+    questions.forEach(function(question) {
+
+        question.classList.remove("active");
+
+    });
+
+
+    const buttons =
+        document.querySelectorAll(".question-btn");
+
+
+    buttons.forEach(function(button) {
+
+        button.classList.remove("active");
+
+    });
+
+
+    const selectedQuestion =
+        document.getElementById(
+            "question" + number
+        );
+
+
+    if(selectedQuestion) {
+
+        selectedQuestion.classList.add("active");
+
+    }
+
+
+    if(buttons[number - 1]) {
+
+        buttons[number - 1].classList.add("active");
+
+    }
+
+
+    document.querySelector(".content").scrollTop = 0;
+
+}
+
+
+/*
+ * =====================================================
+ * FETCH JAVA PROGRAMS AUTOMATICALLY
+ * =====================================================
+ */
+
+programFiles.forEach(function(file, index) {
+
+    const number = index + 1;
+
+
+    if(!file) {
+
+        return;
+
+    }
+
+
+    fetch(file)
+
+        .then(function(response) {
+
+            if(!response.ok) {
+
+                throw new Error(
+                    "Unable to load " + file
+                );
+
+            }
+
+            return response.text();
+
+        })
+
+        .then(function(code) {
+
+            document.getElementById(
+                "javaCode" + number
+            ).textContent = code;
+
+        })
+
+        .catch(function(error) {
+
+            document.getElementById(
+                "javaCode" + number
+            ).textContent =
+                "Unable to load " + file;
+
+            console.error(error);
+
+        });
+
+});
+
+</script>
+
+</body>
+
+</html>

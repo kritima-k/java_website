@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interfaces | Java Practical</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="top-header">
+    <div class="student">
+        <div class="student-name">KRITIMA</div>
+        <div class="student-details">BCA <span>•</span> 3rd Year <span>•</span> 5th Semester</div>
+    </div>
+    <div class="page-title">
+        <h1>Java Programming</h1>
+        <p>Practical Programs</p>
+    </div>
+    <a href="../index.html" class="home-btn">← HOME</a>
+</header>
+
+<nav class="topic-nav">
+    <a href="../index.html">HOME</a>
+    <a href="../BasicPrograms/Basic.html">Basic Programming</a>
+    <a href="../ArrayPrograms/Array.html">Single Arrays</a>
+    <a href="../MultiArrayPrograms/MultiArray.html">Multi Arrays</a>
+    <a href="../StringPrograms/string.html">Strings</a>
+    <a href="../OopsPrograms/oop.html">OOP</a>
+    <a href="../InheritancePrograms/inheritance.html">Inheritance</a>
+    <a href="interface.html" class="active">Interfaces</a>
+    <a href="../ExceptionPrograms/exception.html">Exception Handling</a>
+    <a href="../MultithreadingPrograms/thread.html">Multithreading</a>
+</nav>
+
+<div class="main-container">
+    <aside class="sidebar">
+        <div class="sidebar-header"><h2>Questions <span>•</span> 11</h2></div>
+        <div class="question-list">
+                <button class="question-btn active" onclick="showQuestion(1)">Question 1</button>
+                <button class="question-btn" onclick="showQuestion(2)">Question 2</button>
+                <button class="question-btn" onclick="showQuestion(3)">Question 3</button>
+                <button class="question-btn" onclick="showQuestion(4)">Question 4</button>
+                <button class="question-btn" onclick="showQuestion(5)">Question 5</button>
+                <button class="question-btn" onclick="showQuestion(6)">Question 6</button>
+                <button class="question-btn" onclick="showQuestion(7)">Question 7</button>
+                <button class="question-btn" onclick="showQuestion(8)">Question 8</button>
+                <button class="question-btn" onclick="showQuestion(9)">Question 9</button>
+                <button class="question-btn" onclick="showQuestion(10)">Question 10</button>
+                <button class="question-btn" onclick="showQuestion(11)">Question 11</button>
+        </div>
+    </aside>
+
+    <main class="content">
+
+            <section class="question-page active" id="question1">
+                <h1 class="question-heading">Question <span>01</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create an interface Shape with the getArea() method. Create three classes Rectangle, Circle, and Triangle that implement the Shape interface. Implement the getArea() method for each of the three classes.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode1">Loading Q1.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content">
+                        <pre id="output1">Rectangle area: 20.0
+Circle area: 28.274333882308138
+Triangle area: 12.0</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="question-page" id="question2">
+                <h1 class="question-heading">Question <span>02</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create a Animal interface with a method called bark() that takes no arguments and returns void. Create a Dog class that implements Animal and overrides speak() to print "Dog is barking".</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode2">Loading Q2.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content">
+                        <pre id="output2">Dog is barking</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="question-page" id="question3">
+                <h1 class="question-heading">Question <span>03</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create an interface Flyable with a method called fly_obj(). Create three classes Spacecraft, Airplane, and Helicopter that implement the Flyable interface. Implement the fly_obj() method for each of the three classes.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode3">Loading Q3.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content">
+                        <pre id="output3">Spacecraft flies through space.
+Airplane flies through the sky.
+Helicopter flies by spinning its rotors.</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="question-page" id="question4">
+                <h1 class="question-heading">Question <span>04</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">The bank should have a list of accounts and methods for adding them. Accounts should be an interface with methods to deposit, withdraw, calculate interest, and view balances. SavingsAccount and CurrentAccount should implement the Account interface and have their own unique methods.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode4">Loading Q4.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content">
+                        <pre id="output4">Savings deposit: 500.0
+Interest added: 75.0
+Current withdraw: 300.0
+Current accounts do not earn interest.
+Savings balance: 1575.0
+Current balance: 1700.0</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="question-page" id="question5">
+                <h1 class="question-heading">Question <span>05</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create an interface Resizable with methods resizeWidth(int width) and resizeHeight(int height) that allow an object to be resized. Create a class Rectangle that implements the Resizable interface and implements the resize methods.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode5">Loading Q5.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content">
+                        <pre id="output5">New width: 20
+New height: 15</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="question-page" id="question6">
+                <h1 class="question-heading">Question <span>06</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create an interface Drawable with a method draw() that takes no arguments and returns void. Create three classes Circle, Rectangle, and Triangle that implement the Drawable interface and override the draw() method to draw their respective shapes.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode6">Loading Q6.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content">
+                        <pre id="output6">Drawing a circle.
+Drawing a rectangle.
+Drawing a triangle.</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="question-page" id="question7">
+                <h1 class="question-heading">Question <span>07</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create an interface Sortable with a method sort() that sorts an array of integers in ascending order. Create two classes BubbleSort and SelectionSort that implement the Sortable interface and provide their own implementations of the sort() method.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode7">Loading Q7.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content">
+                        <pre id="output7">Bubble sorted array:
+1 2 5 5 9 
+Selection sorted array:
+2 3 4 7 8 </pre>
+                    </div>
+                </div>
+            </section>
+            <section class="question-page" id="question8">
+                <h1 class="question-heading">Question <span>08</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create an interface Playable with a method play() that takes no arguments and returns void. Create three classes Football, Volleyball, and Basketball that implement the Playable interface and override the play() method to play the respective sports.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode8">Loading Q8.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content">
+                        <pre id="output8">Playing football, kicking the ball into the goal.
+Playing volleyball, hitting the ball over the net.
+Playing basketball, shooting hoops.</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="question-page" id="question9">
+                <h1 class="question-heading">Question <span>09</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create an interface Searchable with a method search(String keyword) that searches for a given keyword in a text document. Create two classes Document and WebPage that implement the Searchable interface and provide their own implementations of the search() method.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode9">Loading Q9.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content">
+                        <pre id="output9">Searching for "java" inside a document.
+Searching for "java" inside a web page.</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="question-page" id="question10">
+                <h1 class="question-heading">Question <span>10</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create an interface Encryptable with methods encrypt (String data) and decrypt (String encryptedData) that define encryption and decryption operations. Create two classes AES and RSA that implement the Encryptable interface and provide their own encryption and decryption algorithms.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode10">Loading Q10.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content">
+                        <pre id="output10">AES encrypted: ifmmp
+AES decrypted: hello
+RSA encrypted: olleh
+RSA decrypted: hello</pre>
+                    </div>
+                </div>
+            </section>
+            <section class="question-page" id="question11">
+                <h1 class="question-heading">Question <span>11</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create an interface Sortable with a method sort (int[] array) that sorts an array of integers in descending order. Create two classes QuickSort and MergeSort that implement the Sortable interface and provide their own implementations of the sort() method.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header">
+                        <h3>Java Program</h3>
+                        <span class="java-label">.java</span>
+                    </div>
+                    <div class="code-area">
+                        <pre id="javaCode11">Loading Q11.java...</pre>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content">
+                        <pre id="output11">QuickSort descending result:
+9 5 5 2 1 
+MergeSort descending result:
+8 7 4 3 2 </pre>
+                    </div>
+                </div>
+            </section>
+    </main>
+</div>
+
+<script>
+function showQuestion(number) {
+    document.querySelectorAll(".question-page").forEach(page => page.classList.remove("active"));
+    document.querySelectorAll(".question-btn").forEach(button => button.classList.remove("active"));
+    document.getElementById("question" + number).classList.add("active");
+    document.querySelectorAll(".question-btn")[number - 1].classList.add("active");
+}
+
+for (let i = 1; i <= 11; i++) {
+    fetch("Q" + i + ".java")
+        .then(response => {
+            if (!response.ok) throw new Error("Unable to load Q" + i + ".java");
+            return response.text();
+        })
+        .then(code => {
+            document.getElementById("javaCode" + i).textContent = code;
+        })
+        .catch(error => {
+            document.getElementById("javaCode" + i).textContent = "Unable to load Q" + i + ".java";
+            console.error(error);
+        });
+}
+</script>
+</body>
+</html>

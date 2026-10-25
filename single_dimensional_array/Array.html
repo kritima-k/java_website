@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Single Dimensional Array | Java Practical</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     TOP HEADER
+====================================================== -->
+
+<header class="top-header">
+
+```
+<div class="student">
+
+    <div class="student-name">
+        KRITIMA
+    </div>
+
+    <div class="student-details">
+        BCA
+        <span>•</span>
+        3rd Year
+        <span>•</span>
+        5th Semester
+    </div>
+
+</div>
+
+<div class="page-title">
+
+    <h1>
+        Java Programming
+    </h1>
+
+    <p>
+        Practical Programs
+    </p>
+
+</div>
+
+<a href="../index.html" class="home-btn">
+    ← HOME
+</a>
+```
+
+</header>
+
+<!-- =====================================================
+     TOPIC NAVIGATION
+====================================================== -->
+
+<nav class="topic-nav">
+
+```
+<a href="../index.html">HOME</a>
+
+<a href="../BasicPrograms/Basic.html">
+    Basic Programming
+</a>
+
+<a href="Array.html" class="active">
+    Single Arrays
+</a>
+
+
+<a href="../multidimensionalarrays/MultiArray.html">
+    Multi Arrays
+</a>
+
+<a href="../StringPrograms/string.html">
+    Strings
+</a>
+
+<a href="../OopsPrograms/oop.html">
+    OOP
+</a>
+
+<a href="../InheritancePrograms/inheritance.html">
+    Inheritance
+</a>
+
+</a>
+  <a href="../interfaces/interface.html" >
+    Interfaces</a>
+
+
+<a href="../ExceptionPrograms/exception.html">
+    Exception Handling
+</a>
+
+<a href="../MultithreadingPrograms/thread.html">
+    Multithreading
+</a>
+```
+
+</nav>
+
+<!-- =====================================================
+     MAIN LAYOUT
+====================================================== -->
+
+<div class="main-container">
+
+```
+<!-- =================================================
+     LEFT QUESTION SIDEBAR
+================================================== -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-header">
+
+        <h2>
+            Questions <span>•</span> 23
+        </h2>
+
+    </div>
+
+    <div class="question-list" id="questionList"></div>
+
+</aside>
+
+
+<!-- =================================================
+     CONTENT
+================================================== -->
+
+<main class="content" id="content">
+
+</main>
+```
+
+</div>
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+/*
+ * =====================================================
+ * ARRAY QUESTIONS
+ * =====================================================
+ */
+
+const questions = [
+
+    "Program to copy all elements of one array into another array",
+
+    "Program to find the frequency of each element in the array",
+
+    "Program to left rotate the elements of an array",
+
+    "Program to print the duplicate elements of an array",
+
+    "Program to print the elements of an array",
+
+    "Program to print the elements of an array in reverse order",
+
+    "Program to print the elements of an array present on even position",
+
+    "Program to print the elements of an array present on odd position",
+
+    "Program to print the largest element in an array",
+
+    "Program to print the smallest element in an array",
+
+    "Program to print the number of elements present in an array",
+
+    "Program to print the sum of all the items of the array",
+
+    "Program to right rotate the elements of an array",
+
+    "Program to sort the elements of an array in ascending order",
+
+    "Program to sort the elements of an array in descending order",
+
+    "Program to Find 3rd Largest Number in an array",
+
+    "Program to Find 2nd Largest Number in an array",
+
+    "Program to Find Largest Number in an array",
+
+    "Program to Find 2nd Smallest Number in an array",
+
+    "Program to Find Smallest Number in an array",
+
+    "Program to Remove Duplicate Element in an array",
+
+    "Program to Print Odd and Even Numbers from an array",
+
+    "How to Sort an Array in Java"
+
+];
+
+
+/*
+ * =====================================================
+ * OUTPUTS
+ * =====================================================
+ */
+
+const outputs = [
+
+    // Q1
+    `Original array:
+10
+20
+30
+40
+50
+Copied array:
+10
+20
+30
+40
+50`,
+
+    // Q2
+    `10 occurs 3 times
+20 occurs 2 times
+30 occurs 1 times`,
+
+    // Q3
+    `20
+30
+40
+50
+10`,
+
+    // Q4
+    `10
+20`,
+
+    // Q5
+    `10
+20
+30
+40
+50`,
+
+    // Q6
+    `50
+40
+30
+20
+10`,
+
+    // Q7
+    `10
+30
+50`,
+
+    // Q8
+    `20
+40`,
+
+    // Q9
+    `Largest element is 50`,
+
+    // Q10
+    `Smallest element is 10`,
+
+    // Q11
+    `Number of elements: 5`,
+
+    // Q12
+    `Sum of array elements: 150`,
+
+    // Q13
+    `50
+10
+20
+30
+40`,
+
+    // Q14
+    `10
+20
+30
+40
+50`,
+
+    // Q15
+    `50
+40
+30
+20
+10`,
+
+    // Q16
+    `3rd largest element is 30`,
+
+    // Q17
+    `2nd largest element is 40`,
+
+    // Q18
+    `Largest element is 50`,
+
+    // Q19
+    `2nd smallest element is 20`,
+
+    // Q20
+    `Smallest element is 10`,
+
+    // Q21
+    `Array after removing duplicates:
+10
+20
+30
+40`,
+
+    // Q22
+    `Even numbers:
+10
+20
+30
+Odd numbers:
+15
+25
+35`,
+
+    // Q23
+    `10
+20
+30
+40
+50`
+
+];
+
+
+/*
+ * =====================================================
+ * CREATE SIDEBAR BUTTONS AND QUESTION PAGES
+ * =====================================================
+ */
+
+const questionList =
+    document.getElementById("questionList");
+
+const content =
+    document.getElementById("content");
+
+
+questions.forEach(function(question, index) {
+
+    const number = index + 1;
+
+
+    /*
+     * -------------------------------------------------
+     * CREATE SIDEBAR BUTTON
+     * -------------------------------------------------
+     */
+
+    const button = document.createElement("button");
+
+    button.className = "question-btn";
+
+    if (number === 1) {
+
+        button.classList.add("active");
+
+    }
+
+    button.textContent =
+        "Question " + number;
+
+    button.onclick = function() {
+
+        showQuestion(number);
+
+    };
+
+    questionList.appendChild(button);
+
+
+    /*
+     * -------------------------------------------------
+     * CREATE QUESTION PAGE
+     * -------------------------------------------------
+     */
+
+    const section =
+        document.createElement("section");
+
+    section.className =
+        "question-page";
+
+    if (number === 1) {
+
+        section.classList.add("active");
+
+    }
+
+    section.id =
+        "question" + number;
+
+
+    /*
+     * -------------------------------------------------
+     * QUESTION HEADING
+     * -------------------------------------------------
+     */
+
+    const heading =
+        document.createElement("h1");
+
+    heading.className =
+        "question-heading";
+
+    heading.innerHTML =
+        'Question <span>' +
+        String(number).padStart(2, "0") +
+        '</span>';
+
+
+    /*
+     * -------------------------------------------------
+     * QUESTION BOX
+     * -------------------------------------------------
+     */
+
+    const questionBox =
+        document.createElement("div");
+
+    questionBox.className =
+        "question-box";
+
+
+    const boxTitle =
+        document.createElement("div");
+
+    boxTitle.className =
+        "box-title";
+
+    boxTitle.textContent =
+        "Question";
+
+
+    const questionText =
+        document.createElement("div");
+
+    questionText.className =
+        "question-placeholder";
+
+    questionText.textContent =
+        question;
+
+
+    questionBox.appendChild(boxTitle);
+
+    questionBox.appendChild(questionText);
+
+
+    /*
+     * -------------------------------------------------
+     * JAVA PROGRAM BOX
+     * -------------------------------------------------
+     */
+
+    const programBox =
+        document.createElement("div");
+
+    programBox.className =
+        "program-box";
+
+
+    const programHeader =
+        document.createElement("div");
+
+    programHeader.className =
+        "program-header";
+
+
+    const programTitle =
+        document.createElement("h3");
+
+    programTitle.textContent =
+        "Java Program";
+
+
+    const javaLabel =
+        document.createElement("span");
+
+    javaLabel.className =
+        "java-label";
+
+    javaLabel.textContent =
+        ".java";
+
+
+    programHeader.appendChild(programTitle);
+
+    programHeader.appendChild(javaLabel);
+
+
+    const codeArea =
+        document.createElement("div");
+
+    codeArea.className =
+        "code-area";
+
+
+    const code =
+        document.createElement("pre");
+
+    code.id =
+        "javaCode" + number;
+
+    code.textContent =
+        "Loading Q" + number + ".java...";
+
+
+    codeArea.appendChild(code);
+
+
+    programBox.appendChild(programHeader);
+
+    programBox.appendChild(codeArea);
+
+
+    /*
+     * -------------------------------------------------
+     * OUTPUT BOX
+     * -------------------------------------------------
+     */
+
+    const outputBox =
+        document.createElement("div");
+
+    outputBox.className =
+        "output-box";
+
+
+    const outputHeader =
+        document.createElement("div");
+
+    outputHeader.className =
+        "output-header";
+
+    outputHeader.textContent =
+        "Output";
+
+
+    const outputContent =
+        document.createElement("div");
+
+    outputContent.className =
+        "output-content";
+
+
+    /*
+     * Add the correct output
+     */
+
+    outputContent.textContent =
+        outputs[index];
+
+
+    outputBox.appendChild(outputHeader);
+
+    outputBox.appendChild(outputContent);
+
+
+    /*
+     * -------------------------------------------------
+     * ADD EVERYTHING TO SECTION
+     * -------------------------------------------------
+     */
+
+    section.appendChild(heading);
+
+    section.appendChild(questionBox);
+
+    section.appendChild(programBox);
+
+    section.appendChild(outputBox);
+
+
+    content.appendChild(section);
+
+});
+
+
+/*
+ * =====================================================
+ * SHOW QUESTION
+ * =====================================================
+ */
+
+function showQuestion(number) {
+
+    const questions =
+        document.querySelectorAll(".question-page");
+
+
+    questions.forEach(function(question) {
+
+        question.classList.remove("active");
+
+    });
+
+
+    const buttons =
+        document.querySelectorAll(".question-btn");
+
+
+    buttons.forEach(function(button) {
+
+        button.classList.remove("active");
+
+    });
+
+
+    const selectedQuestion =
+        document.getElementById(
+            "question" + number
+        );
+
+
+    if (selectedQuestion) {
+
+        selectedQuestion.classList.add("active");
+
+    }
+
+
+    if (buttons[number - 1]) {
+
+        buttons[number - 1].classList.add("active");
+
+    }
+
+
+    document.querySelector(".content").scrollTop = 0;
+
+}
+
+
+/*
+ * =====================================================
+ * FETCH Q1.JAVA TO Q23.JAVA AUTOMATICALLY
+ * =====================================================
+ */
+
+questions.forEach(function(question, index) {
+
+    const number = index + 1;
+
+
+    fetch("Q" + number + ".java")
+
+        .then(function(response) {
+
+            if (!response.ok) {
+
+                throw new Error(
+                    "Unable to load Q" +
+                    number +
+                    ".java"
+                );
+
+            }
+
+            return response.text();
+
+        })
+
+        .then(function(code) {
+
+            document.getElementById(
+                "javaCode" + number
+            ).textContent = code;
+
+        })
+
+        .catch(function(error) {
+
+            document.getElementById(
+                "javaCode" + number
+            ).textContent =
+                "Unable to load Q" +
+                number +
+                ".java";
+
+            console.error(error);
+
+        });
+
+});
+
+</script>
+
+</body>
+
+</html>
