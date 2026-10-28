@@ -1,4 +1,4 @@
-```java
+
 package StringPrograms;
 
 import java.util.Scanner;

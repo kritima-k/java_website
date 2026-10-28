@@ -1,4 +1,3 @@
-
 package StringPrograms;
 import java.util.Scanner;
 class SplitString 
