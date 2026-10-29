@@ -1,34 +1,37 @@
 package interfaces;
-
-// Drawable says any class implementing it must be able to draw itself
-interface Drawable {
+interface Drawable 
+{
 void draw();
 }
-
-class CircleDrawable implements Drawable {
+class CircleDrawable implements Drawable 
+{
 public void draw() {
 System.out.println("Drawing a circle.");
 }
 }
-
-class RectangleDrawable implements Drawable {
-public void draw() {
+class RectangleDrawable implements Drawable 
+{
+public void draw() 
+{
 System.out.println("Drawing a rectangle.");
 }
 }
 
-class TriangleDrawable implements Drawable {
-public void draw() {
+class TriangleDrawable implements Drawable 
+{
+public void draw() 
+{
 System.out.println("Drawing a triangle.");
 }
 }
 
- class DrawableInterface {
-public static void main(String[] args) {
+class DrawableInterface 
+{
+public static void main(String[] args) 
+{
 Drawable circle = new CircleDrawable();
 Drawable rectangle = new RectangleDrawable();
 Drawable triangle = new TriangleDrawable();
-
 circle.draw();
 rectangle.draw();
 triangle.draw();

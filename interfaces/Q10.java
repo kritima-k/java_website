@@ -1,6 +1,4 @@
 package interfaces;
-
-// Encryptable says any class implementing it must support encrypt and decrypt
 interface Encryptable {
 String encrypt(String data);
 String decrypt(String encryptedData);

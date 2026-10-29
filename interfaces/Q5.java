@@ -1,26 +1,25 @@
 package interfaces;
-
-// Resizable says any class implementing it must support resizing width and height
-interface Resizable {
+interface Resizable 
+{
 void resizeWidth(int width);
 void resizeHeight(int height);
 }
-
 // Rectangle implements Resizable and stores its own width and height
-class RectangleResizable implements Resizable {
+class RectangleResizable implements Resizable
+{
 int width, height;
-
-RectangleResizable(int width, int height) {
+RectangleResizable(int width, int height) 
+{
 this.width = width;
 this.height = height;
 }
-
-public void resizeWidth(int width) {
+public void resizeWidth(int width) 
+{
 this.width = width;
 System.out.println("New width: " + this.width);
 }
-
-public void resizeHeight(int height) {
+public void resizeHeight(int height) 
+{
 this.height = height;
 System.out.println("New height: " + this.height);
 }
