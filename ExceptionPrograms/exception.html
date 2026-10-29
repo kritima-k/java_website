@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exception Handling | Java Practical</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     TOP HEADER
+====================================================== -->
+
+<header class="top-header">
+
+    <div class="student">
+
+        <div class="student-name">
+            KRITIMA
+        </div>
+
+        <div class="student-details">
+            BCA
+            <span>•</span>
+            3rd Year
+            <span>•</span>
+            5th Semester
+        </div>
+
+    </div>
+
+    <div class="page-title">
+
+        <h1>
+            Java Programming
+        </h1>
+
+        <p>
+            Practical Programs
+        </p>
+
+    </div>
+
+    <a href="../index.html" class="home-btn">
+        HOME
+    </a>
+
+</header>
+
+
+<!-- =====================================================
+     TOPIC NAVIGATION
+====================================================== -->
+
+<nav class="topic-nav">
+
+    <a href="../index.html">HOME</a>
+
+    <a href="../BasicPrograms/Basic.html">
+        Basic Programming
+    </a>
+
+    <a href="../ArrayPrograms/Array.html">
+        Single Arrays
+    </a>
+
+    <a href="../multidimensionalarrays/MultiArray.html">
+        Multi Arrays
+    </a>
+
+    <a href="../StringPrograms/string.html">
+        Strings
+    </a>
+
+    <a href="../OopsPrograms/oop.html">
+        OOP
+    </a>
+
+    <a href="../InheritancePrograms/inheritance.html">
+        Inheritance
+    </a>
+
+    <a href="../interfaces/interface.html">
+        Interfaces
+    </a>
+
+    <a href="exception.html" class="active">
+        Exception Handling
+    </a>
+
+    <a href="../MultithreadingPrograms/thread.html">
+        Multithreading
+    </a>
+
+</nav>
+
+
+<!-- =====================================================
+     MAIN LAYOUT
+====================================================== -->
+
+<div class="main-container">
+
+    <!-- LEFT QUESTION SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+
+            <h2>
+                Questions <span>•</span> 5
+            </h2>
+
+        </div>
+
+        <div class="question-list" id="questionList"></div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="content" id="content">
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+/*
+ * =====================================================
+ * EXCEPTION HANDLING QUESTIONS
+ * Replace these descriptions with your actual questions.
+ * =====================================================
+ */
+
+const questions = [
+
+    "Program to demonstrate exception handling in Java",
+
+    "Program to demonstrate try and catch blocks",
+
+    "Program to demonstrate multiple catch blocks",
+
+    "Program to demonstrate the finally block",
+
+    "Program to demonstrate throw and throws"
+
+];
+
+
+/*
+ * =====================================================
+ * OUTPUTS
+ * Replace these placeholders with your actual outputs.
+ * =====================================================
+ */
+
+const outputs = [
+
+    "Exception caught: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4",
+
+    "Caught an error: number 7 is odd not allowed",
+
+    "Caught an error: Arithmetic error occurred",
+
+    "Caught an error: Arithmetic error occurred",
+
+    "Outer try block Caught an array index error completed "
+
+];
+
+
+/*
+ * =====================================================
+ * CREATE SIDEBAR BUTTONS AND QUESTION PAGES
+ * =====================================================
+ */
+
+const questionList = document.getElementById("questionList");
+
+const content = document.getElementById("content");
+
+
+questions.forEach(function(question, index) {
+
+    const number = index + 1;
+
+
+    // CREATE SIDEBAR BUTTON
+
+    const button = document.createElement("button");
+
+    button.className = "question-btn";
+
+    if (number === 1) {
+        button.classList.add("active");
+    }
+
+    button.textContent = "Question " + number;
+
+    button.onclick = function() {
+        showQuestion(number);
+    };
+
+    questionList.appendChild(button);
+
+
+    // CREATE QUESTION PAGE
+
+    const section = document.createElement("section");
+
+    section.className = "question-page";
+
+    if (number === 1) {
+        section.classList.add("active");
+    }
+
+    section.id = "question" + number;
+
+
+    // QUESTION HEADING
+
+    const heading = document.createElement("h1");
+
+    heading.className = "question-heading";
+
+    heading.innerHTML =
+        'Question <span>' +
+        String(number).padStart(2, "0") +
+        '</span>';
+
+
+    // QUESTION BOX
+
+    const questionBox = document.createElement("div");
+
+    questionBox.className = "question-box";
+
+
+    const boxTitle = document.createElement("div");
+
+    boxTitle.className = "box-title";
+
+    boxTitle.textContent = "Question";
+
+
+    const questionText = document.createElement("div");
+
+    questionText.className = "question-placeholder";
+
+    questionText.textContent = question;
+
+
+    questionBox.appendChild(boxTitle);
+
+    questionBox.appendChild(questionText);
+
+
+    // JAVA PROGRAM BOX
+
+    const programBox = document.createElement("div");
+
+    programBox.className = "program-box";
+
+
+    const programHeader = document.createElement("div");
+
+    programHeader.className = "program-header";
+
+
+    const programTitle = document.createElement("h3");
+
+    programTitle.textContent = "Java Program";
+
+
+    const javaLabel = document.createElement("span");
+
+    javaLabel.className = "java-label";
+
+    javaLabel.textContent = ".java";
+
+
+    programHeader.appendChild(programTitle);
+
+    programHeader.appendChild(javaLabel);
+
+
+    const codeArea = document.createElement("div");
+
+    codeArea.className = "code-area";
+
+
+    const code = document.createElement("pre");
+
+    code.id = "javaCode" + number;
+
+    code.textContent = "Loading Q" + number + ".java...";
+
+
+    codeArea.appendChild(code);
+
+    programBox.appendChild(programHeader);
+
+    programBox.appendChild(codeArea);
+
+
+    // OUTPUT BOX
+
+    const outputBox = document.createElement("div");
+
+    outputBox.className = "output-box";
+
+
+    const outputHeader = document.createElement("div");
+
+    outputHeader.className = "output-header";
+
+    outputHeader.textContent = "Output";
+
+
+    const outputContent = document.createElement("div");
+
+    outputContent.className = "output-content";
+
+    outputContent.textContent = outputs[index];
+
+
+    outputBox.appendChild(outputHeader);
+
+    outputBox.appendChild(outputContent);
+
+
+    // ADD ELEMENTS TO QUESTION PAGE
+
+    section.appendChild(heading);
+
+    section.appendChild(questionBox);
+
+    section.appendChild(programBox);
+
+    section.appendChild(outputBox);
+
+
+    content.appendChild(section);
+
+});
+
+
+/*
+ * =====================================================
+ * SHOW SELECTED QUESTION
+ * =====================================================
+ */
+
+function showQuestion(number) {
+
+    const questionPages =
+        document.querySelectorAll(".question-page");
+
+    questionPages.forEach(function(question) {
+        question.classList.remove("active");
+    });
+
+
+    const buttons =
+        document.querySelectorAll(".question-btn");
+
+    buttons.forEach(function(button) {
+        button.classList.remove("active");
+    });
+
+
+    const selectedQuestion =
+        document.getElementById("question" + number);
+
+    if (selectedQuestion) {
+        selectedQuestion.classList.add("active");
+    }
+
+
+    if (buttons[number - 1]) {
+        buttons[number - 1].classList.add("active");
+    }
+
+
+    document.querySelector(".content").scrollTop = 0;
+
+}
+
+
+/*
+ * =====================================================
+ * AUTOMATICALLY FETCH JAVA FILES
+ * =====================================================
+ */
+
+questions.forEach(function(question, index) {
+
+    const number = index + 1;
+
+    fetch("Q" + number + ".java")
+
+        .then(function(response) {
+
+            if (!response.ok) {
+                throw new Error("Unable to load Q" + number + ".java");
+            }
+
+            return response.text();
+
+        })
+
+        .then(function(code) {
+
+            document.getElementById(
+                "javaCode" + number
+            ).textContent = code;
+
+        })
+
+        .catch(function(error) {
+
+            document.getElementById(
+                "javaCode" + number
+            ).textContent =
+                "Unable to load Q" + number + ".java. Check the file location.";
+
+            console.error(error);
+
+        });
+
+});
+
+</script>
+
+</body>
+</html>
