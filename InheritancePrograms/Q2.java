@@ -1,13 +1,15 @@
 package inheritance;
 
-// Vehicle is the parent class with a basic drive method
-class Vehicle {
-void drive() {
+// Vehicle is the parent class with a  drive method
+class Vehicle 
+{
+void drive() 
+{
 System.out.println("The vehicle is moving.");
 }
 }
 
-// Car extends Vehicle, so it inherits drive() but changes what it does
+// Car extends Vehicle ..  so it inherits drive() but changes what it does
 class Car extends Vehicle {
 // overriding the drive method to do something different
 void drive() {
