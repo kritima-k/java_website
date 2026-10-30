@@ -13,8 +13,9 @@ System.out.println("The animal makes a sound.");
 class Cat extends Animal 
 {
 // this will  replace the parents  makeSound with Cats 
-void makeSound() {
-System.out.println("The cat barks.");
+void makeSound() 
+{
+System.out.println("The cat make sound");
 }
 }
 
