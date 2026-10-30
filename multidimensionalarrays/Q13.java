@@ -1,4 +1,3 @@
-```java
 package multidimensionalarrays;
 
 import java.util.Scanner;
@@ -74,4 +73,4 @@ System.out.println("Matrix is not a sparse matrix.");
 sc.close();
 }
 }
-```
+

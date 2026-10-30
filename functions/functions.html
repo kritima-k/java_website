@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Functions Programs | Java Practical</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top-header">
+    <div class="student">
+        <div class="student-name">KRITIMA</div>
+        <div class="student-details">BCA <span>•</span> 3rd Year <span>•</span> 5th Semester</div>
+    </div>
+    <div class="page-title"><h1>Java Programming</h1><p>Practical Programs</p></div>
+    <a href="../index.html" class="home-btn">← HOME</a>
+</header>
+<nav class="topic-nav">
+    <a href="../index.html">HOME</a>
+    <a href="../basic_programming/Basic.html">Basic Programming</a>
+    <a href="../single_dimensional_array/Array.html">Single Dimensional Arrays</a>
+    <a href="../multi_dimensional_array/MultiArray.html">Multi Dimensional Arrays</a>
+    <a href="../Strings/string.html">Strings</a>
+    <a href="../OopsPrograms/oop.html">OOP</a>
+    <a href="../InheritancePrograms/inheritance.html">Inheritance</a>
+    <a href="../ExceptionPrograms/exception.html">Exception Handling</a>
+    <a href="../MultithreadingPrograms/thread.html">Multithreading</a>
+</nav>
+<div class="main-container">
+<aside class="sidebar">
+    <div class="sidebar-header"><h2>Questions <span>•</span> 5</h2></div>
+    <div class="question-list">
+        <button class="question-btn active" onclick="showQuestion(1)">01. Find the Smallest Number</button>
+        <button class="question-btn" onclick="showQuestion(2)">02. Calculate Average</button>
+        <button class="question-btn" onclick="showQuestion(3)">03. Print Alphabets</button>
+        <button class="question-btn" onclick="showQuestion(4)">04. Display Current Date and Time</button>
+        <button class="question-btn" onclick="showQuestion(5)">05. Count Number of 2s</button>
+    </div>
+</aside>
+<main class="content">
+    <section class="question-page active" id="question1">
+        <h1 class="question-heading">Question <span>01</span></h1>
+        <div class="question-box"><div class="box-title">Question</div><div class="question-placeholder">Write a Java program to find the smallest number.</div></div>
+        <div class="program-box">
+            <div class="program-header"><h3>Java Program</h3><span class="java-label">.java</span></div>
+            <div class="code-area"><pre id="javaCode1" class="code-placeholder">Loading Q1.java...</pre></div>
+        </div>
+        <div class="output-box"><div class="output-header">Output</div><div class="output-content"><pre class="sample-output">Smallest number is 5</pre></div></div>
+    </section>
+    <section class="question-page" id="question2">
+        <h1 class="question-heading">Question <span>02</span></h1>
+        <div class="question-box"><div class="box-title">Question</div><div class="question-placeholder">Write a Java program to calculate the average of the given numbers.</div></div>
+        <div class="program-box">
+            <div class="program-header"><h3>Java Program</h3><span class="java-label">.java</span></div>
+            <div class="code-area"><pre id="javaCode2" class="code-placeholder">Loading Q2.java...</pre></div>
+        </div>
+        <div class="output-box"><div class="output-header">Output</div><div class="output-content"><pre class="sample-output">Average is 21.666666666666668</pre></div></div>
+    </section>
+    <section class="question-page" id="question3">
+        <h1 class="question-heading">Question <span>03</span></h1>
+        <div class="question-box"><div class="box-title">Question</div><div class="question-placeholder">Write a Java program to print the alphabets from A to P.</div></div>
+        <div class="program-box">
+            <div class="program-header"><h3>Java Program</h3><span class="java-label">.java</span></div>
+            <div class="code-area"><pre id="javaCode3" class="code-placeholder">Loading Q3.java...</pre></div>
+        </div>
+        <div class="output-box"><div class="output-header">Output</div><div class="output-content"><pre class="sample-output">A B C D E F G H I J K L M N O P </pre></div></div>
+    </section>
+    <section class="question-page" id="question4">
+        <h1 class="question-heading">Question <span>04</span></h1>
+        <div class="question-box"><div class="box-title">Question</div><div class="question-placeholder">Write a Java program to display the current date and time.</div></div>
+        <div class="program-box">
+            <div class="program-header"><h3>Java Program</h3><span class="java-label">.java</span></div>
+            <div class="code-area"><pre id="javaCode4" class="code-placeholder">Loading Q4.java...</pre></div>
+        </div>
+        <div class="output-box"><div class="output-header">Output</div><div class="output-content"><pre class="sample-output">Current date and time: 2026-10-30T17:50:21.302631100</pre></div></div>
+    </section>
+    <section class="question-page" id="question5">
+        <h1 class="question-heading">Question <span>05</span></h1>
+        <div class="question-box"><div class="box-title">Question</div><div class="question-placeholder">Write a Java program to count how many times the digit 2 occurs in a number.</div></div>
+        <div class="program-box">
+            <div class="program-header"><h3>Java Program</h3><span class="java-label">.java</span></div>
+            <div class="code-area"><pre id="javaCode5" class="code-placeholder">Loading Q5.java...</pre></div>
+        </div>
+        <div class="output-box"><div class="output-header">Output</div><div class="output-content"><pre class="sample-output">Number of 2s: 3</pre></div></div>
+    </section>
+</main>
+</div>
+<script>
+function showQuestion(number) {
+    document.querySelectorAll(".question-page").forEach(function(question) {
+        question.classList.remove("active");
+    });
+    document.querySelectorAll(".question-btn").forEach(function(button) {
+        button.classList.remove("active");
+    });
+    const selectedQuestion = document.getElementById("question" + number);
+    if (selectedQuestion) selectedQuestion.classList.add("active");
+    const buttons = document.querySelectorAll(".question-btn");
+    if (buttons[number - 1]) buttons[number - 1].classList.add("active");
+    document.querySelector(".content").scrollTop = 0;
+}
+for (let i = 1; i <= 5; i++) {
+    fetch("Q" + i + ".java")
+        .then(function(response) {
+            if (!response.ok) throw new Error("HTTP " + response.status);
+            return response.text();
+        })
+        .then(function(code) {
+            const codeElement = document.getElementById("javaCode" + i);
+            if (codeElement) codeElement.textContent = code;
+        })
+        .catch(function(error) {
+            const codeElement = document.getElementById("javaCode" + i);
+            if (codeElement) codeElement.textContent = "Unable to load Q" + i + ".java. Check that the file is in the same folder as this HTML file.";
+            console.error("Could not load Q" + i + ".java:", error);
+        });
+}
+</script>
+</body>
+</html>

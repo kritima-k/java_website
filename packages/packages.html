@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages | Java Practical</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- TOP HEADER: follows the existing Java practical reference -->
+    <header class="top-header">
+        <div class="student">
+            <div class="student-name">KRITIMA</div>
+            <div class="student-details">BCA <span>•</span> 3rd Year <span>•</span> 5th Semester</div>
+        </div>
+        <div class="page-title">
+            <h1>Java Programming</h1>
+            <p>Practical Programs</p>
+        </div>
+        <a href="../index.html" class="home-btn">← HOME</a>
+    </header>
+
+    <!-- TOPIC NAVIGATION: uses the same shared stylesheet and navigation style -->
+    <nav class="topic-nav">
+        <a href="../index.html">HOME</a>
+        <a href="../BasicPrograms/Basic.html">Basic Programming</a>
+        <a href="../single_dimensional_array/Array.html">Single Dimensional Arrays</a>
+        <a href="../multi_dimensional_array/MultiArray.html">Multi Dimensional Arrays</a>
+        <a href="../StringPrograms/string.html">Strings</a>
+        <a href="../OopsPrograms/oop.html">OOP</a>
+        <a href="../InheritancePrograms/inheritance.html">Inheritance</a>
+        <a href="../ExceptionPrograms/exception.html">Exception Handling</a>
+        <a href="../MultithreadingPrograms/thread.html">Multithreading</a>
+        <a href="packages_output.html" class="active">Packages</a>
+    </nav>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Questions <span>•</span> 5</h2>
+            </div>
+            <div class="question-list">
+                <button class="question-btn active" onclick="showQuestion(1)">Question 1</button>
+                <button class="question-btn" onclick="showQuestion(2)">Question 2</button>
+                <button class="question-btn" onclick="showQuestion(3)">Question 3</button>
+                <button class="question-btn" onclick="showQuestion(4)">Question 4</button>
+                <button class="question-btn" onclick="showQuestion(5)">Question 5</button>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section class="question-page active" id="question1">
+                <h1 class="question-heading">Question <span>01</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to print the current date using the import statement.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header"><h3>Java Program</h3><span class="java-label">.java</span></div>
+                    <div class="code-area"><pre id="javaCode1" class="code-placeholder">Loading Q1.java...</pre></div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Current date = Fri Oct 30 18:49:32 IST 2026</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question2">
+                <h1 class="question-heading">Question <span>02</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to print the current date using the fully qualified name.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header"><h3>Java Program</h3><span class="java-label">.java</span></div>
+                    <div class="code-area"><pre id="javaCode2" class="code-placeholder">Loading Q2.java...</pre></div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Current date = Fri Oct 30 18:52:05 IST 2026</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question3">
+                <h1 class="question-heading">Question <span>03</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to inherit the Date class using the import statement.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header"><h3>Java Program</h3><span class="java-label">.java</span></div>
+                    <div class="code-area"><pre id="javaCode3" class="code-placeholder">Loading Q3.java...</pre></div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Current date = Fri Oct 30 18:53:24 IST 2026</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question4">
+                <h1 class="question-heading">Question <span>04</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to inherit the Date class using its fully qualified name.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header"><h3>Java Program</h3><span class="java-label">.java</span></div>
+                    <div class="code-area"><pre id="javaCode4" class="code-placeholder">Loading Q4.java...</pre></div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">Current date = Fri Oct 30 18:55:00 IST 2026</pre></div>
+                </div>
+            </section>
+
+            <section class="question-page" id="question5">
+                <h1 class="question-heading">Question <span>05</span></h1>
+                <div class="question-box">
+                    <div class="box-title">Question</div>
+                    <div class="question-placeholder">Write a Java program to create multiple default classes in one source file.</div>
+                </div>
+                <div class="program-box">
+                    <div class="program-header"><h3>Java Program</h3><span class="java-label">.java</span></div>
+                    <div class="code-area"><pre id="javaCode5" class="code-placeholder">Loading Q5.java...</pre></div>
+                </div>
+                <div class="output-box">
+                    <div class="output-header">Output</div>
+                    <div class="output-content"><pre class="sample-output">This is first class
+This is student class</pre></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function showQuestion(number) {
+            document.querySelectorAll(".question-page").forEach(function (page) {
+                page.classList.remove("active");
+            });
+            document.querySelectorAll(".question-btn").forEach(function (button) {
+                button.classList.remove("active");
+            });
+
+            const selectedQuestion = document.getElementById("question" + number);
+            const selectedButton = document.querySelectorAll(".question-btn")[number - 1];
+            if (selectedQuestion) selectedQuestion.classList.add("active");
+            if (selectedButton) selectedButton.classList.add("active");
+            document.querySelector(".content").scrollTop = 0;
+        }
+
+        // Automatically fetch Q1.java to Q5.java from the same folder as this HTML file.
+        for (let i = 1; i <= 5; i++) {
+            fetch("Q" + i + ".java")
+                .then(function (response) {
+                    if (!response.ok) throw new Error("HTTP " + response.status);
+                    return response.text();
+                })
+                .then(function (code) {
+                    const codeElement = document.getElementById("javaCode" + i);
+                    if (codeElement) codeElement.textContent = code;
+                })
+                .catch(function () {
+                    const codeElement = document.getElementById("javaCode" + i);
+                    if (codeElement) {
+                        codeElement.textContent = "Unable to load Q" + i + ".java. Check that the Java file is in the same folder as this HTML file.";
+                    }
+                });
+        }
+    </script>
+</body>
+</html>

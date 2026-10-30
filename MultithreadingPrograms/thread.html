@@ -121,7 +121,7 @@
         <div class="sidebar-header">
 
             <h2>
-                Questions <span>•</span> 13
+                Questions <span>•</span> 9
             </h2>
 
         </div>
@@ -157,14 +157,6 @@ const questions = [
     "Create a thread to print Hello World",
 
     "Print even and odd numbers using multiple threads",
-
-    "Sort an array using multiple threads",
-
-    "Perform matrix multiplication using multiple threads",
-
-    "Find the sum of all prime numbers up to a given limit using multiple threads",
-
-    "Create a concurrent web crawler that crawls multiple websites simultaneously using threads",
 
     "Create a bank account with concurrent deposits and withdrawals using threads",
 
@@ -212,19 +204,6 @@ even 16
 odd 19
 even 18
 even 20`,
-
-`Sorted array: [10, 20, 30, 40, 50, 60]`,
-
-`Result of matrix multiplication:
-19 22
-43 50`,
-
-`Sum of prime numbers up to 20 = 77`,
-
-`https://www.google.com - Response Code: 200
-https://www.github.com - Response Code: 200
-https://www.wikipedia.org - Response Code: 403
-Web crawling completed.`,
 
 `Deposited: 500
 Balance after deposit: 1500
@@ -446,8 +425,10 @@ questions.forEach(function(question, index) {
     code.id =
         "javaCode" + number;
 
+    const sourceNumbers = [1, 2, 7, 8, 9, 10, 11, 12, 13];
+
     code.textContent =
-        "Loading Q" + number + ".java...";
+        "Loading Q" + sourceNumbers[index] + ".java...";
 
 
     codeArea.appendChild(code);
@@ -582,14 +563,16 @@ function showQuestion(number)
    FETCH JAVA PROGRAMS AUTOMATICALLY
 ===================================================== */
 
+const sourceNumbers = [1, 2, 7, 8, 9, 10, 11, 12, 13];
+
 questions.forEach(function(question, index)
 {
 
-    const number =
-        index + 1;
+    const number = index + 1;
+    const sourceNumber = sourceNumbers[index];
 
 
-    fetch("Q" + number + ".java")
+    fetch("Q" + sourceNumber + ".java")
 
         .then(function(response)
         {
@@ -598,7 +581,7 @@ questions.forEach(function(question, index)
             {
                 throw new Error(
                     "Unable to load Q" +
-                    number +
+                    sourceNumber +
                     ".java"
                 );
             }
@@ -623,7 +606,7 @@ questions.forEach(function(question, index)
                 "javaCode" + number
             ).textContent =
                 "Unable to load Q" +
-                number +
+                sourceNumber +
                 ".java";
 
             console.error(error);
