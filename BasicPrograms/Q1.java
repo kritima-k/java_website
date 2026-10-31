@@ -1,4 +1,4 @@
-package BasicPrograms ; ;
+package BasicPrograms ;
 // Program to print Hello World
 class HelloWorld
 {
