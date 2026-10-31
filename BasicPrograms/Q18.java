@@ -2,23 +2,25 @@ package BasicPrograms;
 
 import java.util.Scanner;
 
-// Program to convert a string value into an integer
-class StringToInteger
+// Program to reverse a number
+class  ReverseNumber
 {
 public static void main(String[] args)
 {
 Scanner sc = new Scanner(System.in);
-
-// taking a number in string form as input
+// taking a number as input
 System.out.println("Enter a number:");
-String str = sc.nextLine();
-
-// converting the string into an integer
-int number = Integer.parseInt(str);
-
-// displaying the converted integer
-System.out.println("Integer value = " + number);
-
+int number = sc.nextInt();
+int reverse = 0;
+// reversing the number
+while (number != 0)
+{
+int digit = number % 10;
+reverse = reverse * 10 + digit;
+number = number / 10;
+}
+// displaying the reversed number
+System.out.println("Reversed number = " + reverse);
 sc.close();
 }
 }

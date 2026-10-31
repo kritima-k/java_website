@@ -1,8 +1,6 @@
 package BasicPrograms;
 
 import java.util.Scanner;
-
-// Program to calculate n + nn + nnn
 class SumOfNumberPattern
 {
 public static void main(String[] args)

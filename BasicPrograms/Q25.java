@@ -3,7 +3,7 @@ package BasicPrograms;
 import java.util.Scanner;
 
 // Program to add two numbers without using arithmetic operators
-class AddWithoutArithmeticOperator
+class Add
 {
 public static void main(String[] args)
 {

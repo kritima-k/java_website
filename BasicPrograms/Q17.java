@@ -8,7 +8,6 @@ public static void main(String[] args)
 // loop runs from 1 to 20 to check each number
 for(int i = 1; i <= 20; i++)
 {
-// a number is even when its remainder after division by 2 is zero
 if(i % 2 == 0)
 {
 // printing the number if it is even
