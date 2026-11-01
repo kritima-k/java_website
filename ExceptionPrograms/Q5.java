@@ -4,6 +4,7 @@ public class Q5
 static void checkNumber(int num) throws ArithmeticException
 {
 if (num < 0)
+
 {
 throw new ArithmeticException("Negative number not allowed");
 }
